@@ -1,0 +1,52 @@
+MERGE THIS INTO MY EXISTING SIDDHESH & PRIYANKA WEDDING INVITATION PROJECT.
+
+First inspect the entire project and understand its framework, entry point, existing portal intro, components, styles, routing, animation system, responsive/mobile behavior and wedding sections. Do NOT replace my project with a separate demo and do NOT remove existing functionality.
+
+I need these three features integrated into my existing invitation:
+
+1) REAL SCRATCH-TO-REVEAL DATE
+- Add a premium scratch card after the existing portal/intro and at the appropriate point in my invitation.
+- Use HTML Canvas/Pointer Events (or the equivalent architecture if my project is React/TypeScript).
+- It must work with a finger on mobile and mouse on desktop.
+- Under the scratch layer reveal: THE BIG DAY / 27 FEBRUARY 2027 / Siddhesh & Priyanka.
+- Detect scratch percentage and automatically finish at about 58% revealed.
+- Fade away remaining scratch foil smoothly.
+- Do not let scratching accidentally scroll the page; only suppress scrolling while the pointer is actively scratching inside the card.
+
+2) COUNTDOWN AFTER SCRATCH
+- The countdown must NOT be shown as the initial interaction.
+- Sequence must be: existing portal -> existing Siddhesh & Priyanka -> existing & zoom -> existing invitation -> scratch -> date reveal -> countdown.
+- Target: 27 February 2027 at 00:00 IST.
+- Show live DAYS / HOURS / MINUTES / SECONDS.
+- Update every second using a real Date calculation.
+- Countdown must not restart on scroll.
+- It should remain in the normal document after it is revealed.
+
+3) CONTINUOUS FLOWERS / LEAVES / SMALL BUTTERFLIES
+- Add a FIXED decorative particle layer/canvas that covers the entire website, not just one section.
+- It must keep animating while the user scrolls from top to bottom.
+- Mix subtle petals/flowers, leaves, tiny butterflies and occasional gold sparkles.
+- Use pointer-events:none so it never blocks interaction.
+- Use requestAnimationFrame and a reasonable mobile particle count.
+- Randomize size, speed, opacity, horizontal drift and rotation.
+- Butterflies should have subtle wing movement.
+- Recalculate canvas size/devicePixelRatio on resize.
+- Keep it elegant and subtle, not childish and not large emoji graphics.
+
+VISUAL STYLE:
+Keep my existing design. The effects should use the same burgundy/deep red, cream and antique-gold wedding aesthetic. Do not redesign unrelated sections.
+
+MOBILE:
+Optimize for 360px, 390px and 412px widths. The scratch card must be thumb-friendly. Particles must not obscure important text. Existing portal scroll/gesture behavior must remain intact.
+
+IMPORTANT:
+- If React/TypeScript, convert the supplied feature logic into clean reusable components/hooks and clean up event listeners, timers and animation frames on unmount.
+- If plain HTML/CSS/JS, merge the supplied JS/CSS into the existing files without framework migration.
+- Do not duplicate the invitation page.
+- Do not create a backend.
+- Do not overwrite the existing portal unnecessarily.
+- Do not use placeholder statements like “rest of code here”.
+- Return every changed file in full and explain where each feature was integrated.
+- Preserve my existing names, sections, images, event data and animations unless I explicitly ask you to change them.
+
+The supplied reference files are feature.css and scratch-countdown-particles.js. Treat them as implementation references, adapt them to my project's actual architecture, and integrate them rather than blindly copying incompatible selectors.
