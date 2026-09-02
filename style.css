@@ -110,8 +110,10 @@ img {
   -webkit-user-select: none;
 
   transition:
-    opacity 650ms ease,
-    visibility 650ms ease;
+    opacity 500ms ease,
+    visibility 500ms ease;
+
+  will-change: opacity;
 }
 
 
@@ -333,6 +335,10 @@ img {
 
   transform-origin: center;
 
+  backface-visibility: hidden;
+
+  -webkit-font-smoothing: antialiased;
+
   will-change: transform;
 
   text-shadow:
@@ -487,6 +493,12 @@ img {
   height: 100%;
 
   width: 0%;
+
+  transform: scaleX(0);
+
+  transform-origin: left center;
+
+  will-change: transform;
 
   background:
     linear-gradient(
@@ -1441,6 +1453,78 @@ img {
 
 
 /* =========================================================
+   LOCATION
+   ========================================================= */
+
+.location-section {
+
+  background:
+    radial-gradient(
+      70% 60% at 50% 0%,
+      rgba(216, 179, 112, 0.08),
+      transparent 70%
+    ),
+    var(--burgundy-deep);
+
+  text-align: center;
+}
+
+.location-section h2 {
+
+  margin: 0;
+
+  color: var(--gold-soft);
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(
+      42px,
+      10vw,
+      78px
+    );
+
+  font-style: italic;
+}
+
+.location-section h2 em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.location-address {
+  margin: 18px 0 0;
+  color: rgba(247, 239, 224, 0.72);
+  font-size: 18px;
+}
+
+.location-button {
+
+  display: inline-block;
+  margin-top: 30px;
+  padding: 13px 25px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold-soft);
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.location-button:hover,
+.location-button:focus-visible {
+
+  background: var(--gold);
+  color: var(--burgundy-deep);
+}
+
+
+/* =========================================================
    RSVP
    ========================================================= */
 
@@ -1599,6 +1683,7 @@ footer p {
 
   .story-section,
   .events-section,
+  .location-section,
   .rsvp-section {
 
     padding:

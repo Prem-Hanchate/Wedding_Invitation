@@ -168,14 +168,14 @@
 
     if (width <= 380) {
 
-      return 58;
+      return 8.5;
 
     }
 
 
     if (width <= 600) {
 
-      return 68;
+      return 9.5;
 
     }
 
@@ -184,7 +184,7 @@
      * Larger zoom for desktop.
      */
 
-    return 88;
+    return 11;
 
   }
 
@@ -323,10 +323,8 @@
        PROGRESS
        ------------------------------------------------------ */
 
-    progressBar.style.width =
-      `${(
-        p * 100
-      ).toFixed(2)}%`;
+    progressBar.style.transform =
+      `scaleX(${p})`;
 
 
     /* ------------------------------------------------------
@@ -334,9 +332,9 @@
        ------------------------------------------------------ */
 
     const invitationReveal =
-      easeInOutCubic(
-        (p - 0.68) /
-        0.32
+      easeOutCubic(
+        (p - 0.64) /
+        0.36
       );
 
 
@@ -373,18 +371,25 @@
 
   function animationLoop() {
 
-    if (!autoAnimating) {
+    const difference =
+      targetProgress -
+      progress;
+
+    if (
+      !autoAnimating &&
+      Math.abs(difference) < 0.0008
+    ) {
+
+      progress =
+        targetProgress;
+
+      render();
 
       rafId = null;
 
       return;
 
     }
-
-
-    const difference =
-      targetProgress -
-      progress;
 
 
     /*
@@ -402,6 +407,7 @@
 
 
     if (
+      !autoAnimating &&
       Math.abs(
         difference
       ) < 0.0008
@@ -953,41 +959,29 @@
     );
 
 
-    /*
-     * Give the user a moment to see
-     * the final & portal transition.
-     */
+    intro.classList.add(
+      "finished"
+    );
+
+    document.body.classList.remove(
+      "intro-active"
+    );
+
+    requestAnimationFrame(() => {
+      invitation.scrollIntoView({
+        behavior: reducedMotion ? "auto" : "smooth",
+        block: "start"
+      });
+    });
 
     setTimeout(
       () => {
 
-        intro.classList.add(
-          "finished"
-        );
-
-
-        document.body.classList.remove(
-          "intro-active"
-        );
-
-
-        /*
-         * Remove the intro completely
-         * after the fade.
-         */
-
-        setTimeout(
-          () => {
-
-            intro.style.display =
-              "none";
-
-          },
-          700
-        );
+        intro.style.display =
+          "none";
 
       },
-      350
+      700
     );
 
   }
