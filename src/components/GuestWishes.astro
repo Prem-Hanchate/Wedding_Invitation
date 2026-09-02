@@ -1,0 +1,15 @@
+<section class="wishes-section feature-section" aria-labelledby="wishesTitle">
+  <div class="section-inner">
+    <p class="section-label">Words from the heart</p>
+    <h2 id="wishesTitle">Guest <em>wishes.</em></h2>
+    <form class="wishes-form" action="https://formspree.io/f/mbgjydjz" method="POST" data-wishes-form>
+      <input type="hidden" name="_subject" value="Wedding guest wish" />
+      <label>Your name<input name="name" type="text" autocomplete="name" required placeholder="Your name" /></label>
+      <label>Your message<textarea name="message" rows="3" maxlength="240" required placeholder="Leave a little love"></textarea></label>
+      <button class="feature-button" type="submit">Leave a wish</button>
+      <p class="form-status" data-wishes-status aria-live="polite"></p>
+    </form>
+    <div class="wishes-list" id="wishesList" aria-live="polite"></div>
+  </div>
+</section>
+<script src="../scripts/wishes.js"></script>

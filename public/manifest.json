@@ -1,0 +1,9 @@
+{
+  "name": "Siddhesh & Priyanka | Wedding Invitation",
+  "short_name": "Siddhesh & Priyanka",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0405",
+  "theme_color": "#0a0405",
+  "icons": [{ "src": "/icons/wedding.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

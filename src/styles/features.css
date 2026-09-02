@@ -1,0 +1,102 @@
+.feature-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 620px;
+}
+
+.feature-section h2 {
+  margin: 0;
+  color: var(--gold-soft);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 9vw, 72px);
+  font-style: italic;
+  line-height: 1;
+}
+
+.feature-section h2 em { color: var(--gold); font-style: normal; }
+
+.calendar-section,
+.wishes-section {
+  padding: 90px 20px;
+  color: var(--cream);
+  text-align: center;
+  background: radial-gradient(70% 60% at 50% 0%, rgba(147, 23, 42, .28), transparent 70%), var(--burgundy-deep);
+}
+
+.calendar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.feature-button {
+  min-height: 48px;
+  padding: 13px 22px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold-soft);
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .3s ease, color .3s ease, opacity .3s ease;
+}
+
+.feature-button:hover,
+.feature-button:focus-visible { background: var(--gold); color: var(--burgundy-deep); }
+.feature-button:disabled { cursor: wait; opacity: .6; }
+
+.rsvp-date { margin: 25px 0 0; color: var(--gold); font-family: Arial, sans-serif; font-size: 11px; letter-spacing: .3em; }
+
+.rsvp-form,
+.wishes-form {
+  display: grid;
+  gap: 16px;
+  width: min(100%, 520px);
+  margin: 38px auto 0;
+  text-align: left;
+}
+
+.rsvp-form label,
+.wishes-form label { display: grid; gap: 7px; color: var(--gold); font-family: Arial, sans-serif; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; }
+.rsvp-form label span { color: rgba(247,239,224,.55); letter-spacing: 0; text-transform: none; }
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea,
+.wishes-form input,
+.wishes-form textarea { width: 100%; min-height: 50px; padding: 13px 14px; border: 1px solid rgba(216,179,112,.5); border-radius: 2px; outline: 0; background: rgba(10,4,5,.42); color: var(--cream); font: 18px "Cormorant Garamond", serif; letter-spacing: 0; text-transform: none; }
+.rsvp-form textarea,
+.wishes-form textarea { resize: vertical; }
+.rsvp-form input:focus,
+.rsvp-form select:focus,
+.rsvp-form textarea:focus,
+.wishes-form input:focus,
+.wishes-form textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(216,179,112,.16); }
+.rsvp-form select option { background: var(--burgundy-deep); }
+.rsvp-form .rsvp-button { width: 100%; margin-top: 6px; }
+.form-status,
+.share-status { min-height: 1.2em; margin: 0; color: var(--gold-soft); font-family: Arial, sans-serif; font-size: 11px; letter-spacing: .04em; text-align: center; }
+.form-status.success { color: #b9d6a0; }
+.form-status.error { color: #efb0a7; }
+
+.share-action { padding: 35px 20px; background: var(--burgundy-deep); text-align: center; }
+.share-status { margin-top: 10px; }
+
+.wishes-list { display: grid; gap: 12px; width: min(100%, 520px); margin: 34px auto 0; text-align: left; }
+.wish-item { padding: 18px 20px; border-left: 1px solid var(--gold); background: rgba(10,4,5,.24); animation: wish-in .5s ease both; }
+.wish-item strong { color: var(--gold-soft); font-family: "Playfair Display", serif; font-size: 20px; font-style: italic; }
+.wish-item p { margin: 6px 0 0; color: rgba(247,239,224,.76); font-size: 18px; }
+@keyframes wish-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.music-control { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 30; }
+.icon-button { display: grid; width: 44px; height: 44px; place-items: center; border: 1px solid var(--gold); border-radius: 50%; background: rgba(10,4,5,.82); color: var(--gold-soft); font-size: 20px; cursor: pointer; }
+.icon-button:hover, .icon-button:focus-visible { background: var(--gold); color: var(--burgundy-deep); }
+
+@media (max-width: 600px) {
+  .calendar-actions { flex-direction: column; align-items: stretch; }
+  .calendar-actions .feature-button { width: 100%; }
+  .map-frame iframe { height: 240px; }
+  .feature-button { width: 100%; }
+}

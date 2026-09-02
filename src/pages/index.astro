@@ -1,0 +1,65 @@
+---
+import "../styles/global.css";
+import PortalIntro from "../components/PortalIntro.astro";
+import ParticleField from "../components/ParticleField.astro";
+import ScratchCard from "../components/ScratchCard.astro";
+import Countdown from "../components/Countdown.astro";
+import CalendarButtons from "../components/CalendarButtons.astro";
+import EventsGrid from "../components/EventsGrid.astro";
+import PhotoScroller from "../components/PhotoScroller.astro";
+import LocationSection from "../components/LocationSection.astro";
+import GuestWishes from "../components/GuestWishes.astro";
+import RsvpSection from "../components/RsvpSection.astro";
+import ShareButton from "../components/ShareButton.astro";
+import MusicToggle from "../components/MusicToggle.astro";
+import PwaRegister from "../components/PwaRegister.astro";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Siddhesh & Priyanka — Wedding Invitation" />
+    <meta name="theme-color" content="#0a0405" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>Siddhesh & Priyanka | Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:ital,wght@500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <PortalIntro />
+    <ParticleField />
+    <MusicToggle />
+    <main id="invitation" class="invitation" aria-hidden="true">
+      <section class="hero-section">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Together with their families</p>
+          <div class="hero-ornament"><span></span><b>✦</b><span></span></div>
+          <h1>Siddhesh <em>&amp;</em> Priyanka</h1>
+          <p class="hero-subtitle">Are getting married</p>
+        </div>
+      </section>
+      <section class="story-section">
+        <div class="section-inner">
+          <p class="section-label">A new chapter</p>
+          <h2>Two hearts,<br /><em>one beautiful journey.</em></h2>
+          <p class="story-text">With hearts full of happiness, Siddhesh and Priyanka invite you to be a part of their special day and celebrate the beginning of their forever.</p>
+          <div class="gold-line"></div>
+        </div>
+      </section>
+      <ScratchCard />
+      <Countdown />
+      <CalendarButtons />
+      <EventsGrid />
+      <PhotoScroller />
+      <LocationSection />
+      <GuestWishes />
+      
+      <footer><div>Thank you</div><p>Siddhesh & Priyanka | 19 December 2026</p></footer>
+    </main>
+    <script src="../scripts/interactive.js"></script>
+    <PwaRegister />
+  </body>
+</html>

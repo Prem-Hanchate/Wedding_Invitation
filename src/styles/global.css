@@ -1,0 +1,4 @@
+@import "../../style.css";
+@import "./features.css";
+
+/* Astro keeps the original visual system in one global stylesheet. */

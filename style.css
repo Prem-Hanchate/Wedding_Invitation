@@ -68,7 +68,7 @@ body.intro-active {
 
   overflow: hidden;
 
-  height: 100vh;
+  height: 100svh;
 
   touch-action: none;
 }
@@ -517,7 +517,7 @@ img {
 
   position: relative;
 
-  min-height: 100vh;
+  min-height: 100svh;
 
   background:
 
@@ -1132,6 +1132,30 @@ img {
     110px 20px;
 
   text-align: center;
+}
+
+.events-section,
+.scroller-section,
+.location-section {
+
+  content-visibility: auto;
+
+  contain-intrinsic-size: 0 720px;
+}
+
+.map-frame {
+  width: min(100%, 680px);
+  margin: 28px auto 0;
+  overflow: hidden;
+  border: 1px solid rgba(216, 179, 112, 0.45);
+  background: var(--black);
+}
+
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 280px;
+  border: 0;
 }
 
 

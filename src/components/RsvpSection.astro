@@ -1,0 +1,18 @@
+<section class="rsvp-section feature-section" aria-labelledby="rsvpTitle">
+  <div class="section-inner">
+    <div class="hero-ornament"><span></span><b>✦</b><span></span></div>
+    <p class="section-label">Save the date</p>
+    <h2 id="rsvpTitle">Siddhesh <em>&amp;</em> Priyanka</h2>
+    <p class="rsvp-date">19 · 12 · 2026</p>
+    <form class="rsvp-form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" data-formspree-form>
+      <input type="hidden" name="_subject" value="Wedding RSVP" />
+      <label>Name<input name="name" type="text" autocomplete="name" required placeholder="Your name" /></label>
+      <label>Will you attend?<select name="attendance" required><option value="">Please choose</option><option value="yes">Joyfully, yes</option><option value="no">Sorry, no</option></select></label>
+      <label>Number of guests<input name="guest_count" type="number" min="1" max="10" inputmode="numeric" required value="1" /></label>
+      <label>Message <span>(optional)</span><textarea name="message" rows="3" placeholder="A note for the couple"></textarea></label>
+      <button class="rsvp-button" type="submit">Send RSVP</button>
+      <p class="form-status" data-form-status aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+<script src="../scripts/forms.js"></script>
