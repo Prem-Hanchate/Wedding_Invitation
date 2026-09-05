@@ -1,19 +1,31 @@
-<section id="portalIntro" class="portal-intro" aria-label="Wedding invitation introduction">
-  <div class="portal-bg"></div>
-  <div class="portal-glow"></div>
-  <div class="portal-vignette"></div>
-  <div class="couple-name" id="coupleName">
-    <div class="person">Siddhesh</div>
-    <div class="intro-amp">&amp;</div>
-    <div class="person">Priyanka</div>
+<section class="envelope-intro" id="portalIntro" aria-label="Tap to open your invitation">
+  <div class="envelope-spark-layer" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
-  <div class="portal-amp-wrap" id="portalAmpWrap" aria-hidden="true">
-    <div class="portal-amp">&amp;</div>
+  <div class="envelope-scene">
+    <div class="scene-glow" aria-hidden="true"></div>
+    <div class="envelope-wrap" id="envelopeWrap">
+      <div class="envelope" id="envelope">
+        <div class="envelope-back" id="envelopeBack"></div>
+        <div class="envelope-letter" id="envelopeLetter">
+          <div class="letter-inner">
+            <div class="letter-monogram">S &amp; P</div>
+            <div class="letter-line"></div>
+            <div class="letter-text">Your presence means the world to us. Welcome, and let the celebration begin!</div>
+          </div>
+        </div>
+        <div class="envelope-front-left" id="frontLeft"></div>
+        <div class="envelope-front-right" id="frontRight"></div>
+        <div class="envelope-flap" id="envelopeFlap"></div>
+        <div class="flash-burst" id="flashBurst" aria-hidden="true"></div>
+        <div class="shards" id="shardsContainer" aria-hidden="true"></div>
+        <button class="wax-seal" id="waxSeal" type="button" aria-label="Tap to open your invitation">
+          <span class="wax-seal-initial">S&amp;P</span>
+        </button>
+      </div>
+    </div>
+    <div class="envelope-hint" id="envelopeHint">Tap to open</div>
   </div>
-  <div class="scroll-hint" id="scrollHint">
-    <div class="mouse-icon"><span></span></div>
-    <div>Scroll to unveil</div>
-  </div>
-  <div class="progress-track"><div id="progressBar"></div></div>
 </section>
+<div class="portal-flash" id="portalFlash" aria-hidden="true"></div>
 <script src="../scripts/portal.js"></script>
