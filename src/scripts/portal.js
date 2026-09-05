@@ -3,6 +3,7 @@
 
   const overlay = document.getElementById("portalIntro");
   const seal = document.getElementById("waxSeal");
+  const envelopeHitTarget = document.getElementById("envelopeHitTarget");
   const envelope = document.getElementById("envelope");
   const flap = document.getElementById("envelopeFlap");
   const letter = document.getElementById("envelopeLetter");
@@ -15,7 +16,7 @@
   const shardsContainer = document.getElementById("shardsContainer");
   const invitation = document.getElementById("invitation");
 
-  if (!overlay || !seal || !envelope || !flap || !letter || !invitation) return;
+  if (!overlay || !seal || !envelope || !envelopeHitTarget || !flap || !letter || !invitation) return;
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let opened = false;
@@ -82,4 +83,5 @@
   seal.addEventListener("pointercancel", holdEnd);
   seal.addEventListener("pointerleave", holdEnd);
   seal.addEventListener("click", openEnvelope);
+  envelopeHitTarget.addEventListener("pointerdown", openEnvelope, { passive: true });
 })();
