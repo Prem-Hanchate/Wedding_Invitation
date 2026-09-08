@@ -547,6 +547,31 @@ img {
     );
 }
 
+.invitation::before {
+  
+  content: "";
+  
+  position: absolute;
+  
+  inset: 0;
+  
+  background-image: url("./src/assets/illustrations/marigold-arch.svg");
+  
+  background-size: cover;
+  
+  background-position: center top;
+  
+  background-repeat: no-repeat;
+  
+  opacity: 0;
+  
+  transition: opacity 1s ease 0.5s;
+}
+
+.invitation.visible::before {
+  
+  opacity: 0.15;
+}
 
 .invitation.visible {
 
@@ -797,6 +822,37 @@ img {
       #3b0710,
       #4c0d18
     );
+}
+
+.hero-section::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image: url("./src/assets/illustrations/marigold-arch.svg");
+
+  background-size: cover;
+
+  background-position: center top;
+
+  background-repeat: no-repeat;
+
+  opacity: 0.12;
+
+  pointer-events: none;
+}
+
+@media (max-width: 420px) {
+
+  .hero-section::before {
+
+    background-position: 50% 0;
+
+    background-size: 140% auto;
+  }
 }
 
 
@@ -1315,6 +1371,32 @@ img {
       255,
       0.25
     );
+  
+  text-align: center;
+}
+
+.event-icon {
+
+  width: 48px;
+
+  height: 48px;
+
+  margin: 0 auto 12px;
+
+  display: block;
+}
+
+.section-divider {
+
+  width: min(100%, 400px);
+
+  height: auto;
+
+  display: block;
+
+  margin: 20px auto 30px;
+
+  opacity: 0.85;
 }
 
 

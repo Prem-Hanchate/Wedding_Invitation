@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <defs>
+    <linearGradient id="mehendiRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A52A2A"/>
+      <stop offset="50%" style="stop-color:#8B1538"/>
+      <stop offset="100%" style="stop-color:#6B0F2E"/>
+    </linearGradient>
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5D7B1"/>
+      <stop offset="100%" style="stop-color:#E8C4A0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Hand outline (simplified palm) -->
+  <path d="M25,55 Q22,45 25,35 L28,20 Q30,15 35,15 Q40,15 42,20 L45,30 L48,20 Q50,15 55,15 Q60,15 62,20 L65,35 Q68,45 65,55 Q62,65 50,68 Q38,68 30,62 Q25,58 25,55 Z" 
+        fill="url(#skinTone)" stroke="#C9A88A" stroke-width="1"/>
+  
+  <!-- Mehendi pattern on palm - central motif -->
+  <circle cx="45" cy="45" r="8" fill="none" stroke="url(#mehendiRed)" stroke-width="1.5"/>
+  <circle cx="45" cy="45" r="4" fill="#A52A2A" opacity="0.6"/>
+  
+  <!-- Floral patterns around center -->
+  <g fill="none" stroke="url(#mehendiRed)" stroke-width="1.2">
+    <!-- Top petal swirl -->
+    <path d="M45,35 Q42,28 45,25 Q48,28 45,35"/>
+    <path d="M45,35 Q48,28 45,25"/>
+    
+    <!-- Side petals -->
+    <path d="M35,45 Q28,42 25,45 Q28,48 35,45"/>
+    <path d="M55,45 Q62,42 65,45 Q62,48 55,45"/>
+    
+    <!-- Bottom swirl -->
+    <path d="M45,55 Q42,62 45,65 Q48,62 45,55"/>
+  </g>
+  
+  <!-- Finger decorations (simple bands) -->
+  <g stroke="url(#mehendiRed)" stroke-width="1" fill="none">
+    <path d="M30,22 Q32,20 34,22"/>
+    <path d="M30,25 Q32,23 34,25"/>
+    <path d="M40,18 Q42,16 44,18"/>
+    <path d="M40,21 Q42,19 44,21"/>
+    <path d="M50,22 Q52,20 54,22"/>
+    <path d="M50,25 Q52,23 54,25"/>
+    <path d="M58,35 Q60,33 62,35"/>
+    <path d="M58,38 Q60,36 62,38"/>
+  </g>
+  
+  <!-- Wrist band decoration -->
+  <path d="M28,58 Q45,62 62,58" fill="none" stroke="url(#mehendiRed)" stroke-width="1.5"/>
+  <path d="M30,62 Q45,66 60,62" fill="none" stroke="url(#mehendiRed)" stroke-width="1"/>
+  
+  <!-- Small dots for detail -->
+  <g fill="#A52A2A">
+    <circle cx="40" cy="40" r="1"/>
+    <circle cx="50" cy="40" r="1"/>
+    <circle cx="40" cy="50" r="1"/>
+    <circle cx="50" cy="50" r="1"/>
+    <circle cx="35" cy="45" r="1"/>
+    <circle cx="55" cy="45" r="1"/>
+  </g>
+</svg>

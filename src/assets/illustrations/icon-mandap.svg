@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <defs>
+    <linearGradient id="mandapGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="50%" style="stop-color:#D4AF37"/>
+      <stop offset="100%" style="stop-color:#B8941F"/>
+    </linearGradient>
+    <linearGradient id="fabricRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#DC143C"/>
+      <stop offset="100%" style="stop-color:#8B0000"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Mandap pillars -->
+  <rect x="18" y="30" width="6" height="35" fill="url(#mandapGold)" stroke="#8B7321" stroke-width="1"/>
+  <rect x="56" y="30" width="6" height="35" fill="url(#mandapGold)" stroke="#8B7321" stroke-width="1"/>
+  
+  <!-- Pillar decorations -->
+  <g fill="none" stroke="#8B7321" stroke-width="1">
+    <path d="M20,35 L22,35"/>
+    <path d="M20,38 L22,38"/>
+    <path d="M20,41 L22,41"/>
+    <path d="M58,35 L60,35"/>
+    <path d="M58,38 L60,38"/>
+    <path d="M58,41 L60,41"/>
+  </g>
+  
+  <!-- Top canopy/toran -->
+  <path d="M15,28 Q40,18 65,28" fill="none" stroke="url(#mandapGold)" stroke-width="3"/>
+  <path d="M18,26 Q40,16 62,26" fill="none" stroke="url(#mandapGold)" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Hanging decorations from toran -->
+  <g fill="url(#mandapGold)" stroke="#8B7321" stroke-width="0.5">
+    <path d="M25,25 L25,32 L22,32 L25,25"/>
+    <path d="M40,18 L40,28 L37,28 L40,18"/>
+    <path d="M55,25 L55,32 L52,32 L55,25"/>
+  </g>
+  
+  <!-- Central sacred fire area (simplified) -->
+  <ellipse cx="40" cy="65" rx="12" ry="5" fill="#8B4513" opacity="0.5"/>
+  
+  <!-- Flame representation -->
+  <path d="M40,55 Q35,50 38,45 Q40,42 40,45 Q40,42 42,45 Q45,50 40,55" 
+        fill="url(#fabricRed)" opacity="0.8"/>
+  <ellipse cx="40" cy="50" rx="3" ry="5" fill="#FFA500" opacity="0.6"/>
+  
+  <!-- Decorative fabric drapes -->
+  <path d="M24,30 Q30,40 24,50" fill="none" stroke="url(#fabricRed)" stroke-width="2" opacity="0.7"/>
+  <path d="M56,30 Q50,40 56,50" fill="none" stroke="url(#fabricRed)" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Flower garland across top -->
+  <g fill="#DC143C" opacity="0.8">
+    <circle cx="28" cy="24" r="3"/>
+    <circle cx="34" cy="21" r="3"/>
+    <circle cx="40" cy="20" r="3"/>
+    <circle cx="46" cy="21" r="3"/>
+    <circle cx="52" cy="24" r="3"/>
+  </g>
+</svg>
