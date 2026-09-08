@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <defs>
+    <linearGradient id="kalashGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="50%" style="stop-color:#D4AF37"/>
+      <stop offset="100%" style="stop-color:#B8941F"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Kalash pot body -->
+  <path d="M25,35 Q25,25 40,25 Q55,25 55,35 L55,55 Q55,65 40,65 Q25,65 25,55 Z" 
+        fill="url(#kalashGold)" stroke="#8B7321" stroke-width="1"/>
+  
+  <!-- Kalash neck decoration bands -->
+  <path d="M27,38 L53,38" stroke="#8B7321" stroke-width="1.5" opacity="0.6"/>
+  <path d="M27,42 L53,42" stroke="#8B7321" stroke-width="1.5" opacity="0.6"/>
+  <path d="M27,46 L53,46" stroke="#8B7321" stroke-width="1.5" opacity="0.6"/>
+  
+  <!-- Coconut on top -->
+  <ellipse cx="40" cy="22" rx="10" ry="8" fill="#F5DEB3" stroke="#8B7321" stroke-width="1"/>
+  
+  <!-- Mango leaves (toran style) around coconut -->
+  <path d="M30,20 Q25,15 28,12 Q32,15 32,20" fill="#2D5016" opacity="0.9"/>
+  <path d="M35,18 Q32,10 36,8 Q40,12 38,18" fill="#2D5016" opacity="0.9"/>
+  <path d="M42,18 Q40,12 44,8 Q48,10 45,18" fill="#2D5016" opacity="0.9"/>
+  <path d="M48,20 Q52,15 55,12 Q58,15 53,20" fill="#2D5016" opacity="0.9"/>
+  
+  <!-- Red thread (mauli) wrapped around -->
+  <path d="M32,30 Q40,32 48,30" fill="none" stroke="#DC143C" stroke-width="1.5" opacity="0.8"/>
+  <path d="M32,34 Q40,36 48,34" fill="none" stroke="#DC143C" stroke-width="1.5" opacity="0.8"/>
+  
+  <!-- Base platform -->
+  <rect x="20" y="65" width="40" height="4" fill="#CD853F" opacity="0.7"/>
+  <rect x="18" y="69" width="44" height="3" fill="#8B7321" opacity="0.5"/>
+</svg>

@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="marigoldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFA500;stop-opacity:0.9"/>
+      <stop offset="50%" style="stop-color:#FF8C00;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#FF6B00;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E94560;stop-opacity:0.85"/>
+      <stop offset="50%" style="stop-color:#C73E54;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#A83248;stop-opacity:0.85"/>
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background arch structure -->
+  <path d="M100,900 L100,200 Q100,50 300,50 Q500,50 500,200 L500,900" 
+        fill="none" stroke="#D4AF37" stroke-width="3" opacity="0.6"/>
+  <path d="M120,900 L120,220 Q120,70 300,70 Q480,70 480,220 L480,900" 
+        fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Left marigold garland clusters -->
+  <g class="garland-left">
+    <!-- Marigold flowers left side -->
+    <circle cx="110" cy="180" r="18" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="95" cy="220" r="22" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="105" cy="280" r="20" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="90" cy="340" r="24" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="100" cy="410" r="19" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="85" cy="480" r="23" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="95" cy="560" r="21" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="105" cy="640" r="25" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="90" cy="720" r="20" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="100" cy="800" r="22" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    
+    <!-- Rose accents left -->
+    <circle cx="130" cy="200" r="14" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="120" cy="260" r="16" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="125" cy="320" r="13" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="115" cy="390" r="15" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="120" cy="460" r="14" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="110" cy="540" r="17" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="125" cy="620" r="13" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="115" cy="700" r="16" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="120" cy="780" r="14" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    
+    <!-- Green leaves accent -->
+    <ellipse cx="140" cy="240" rx="8" ry="12" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="135" cy="300" rx="10" ry="14" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="140" cy="370" rx="9" ry="13" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="135" cy="440" rx="11" ry="15" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="140" cy="520" rx="8" ry="12" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="135" cy="600" rx="10" ry="14" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="140" cy="680" rx="9" ry="13" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="135" cy="760" rx="11" ry="15" fill="#2D5016" opacity="0.7"/>
+  </g>
+  
+  <!-- Right marigold garland clusters (mirrored) -->
+  <g class="garland-right">
+    <circle cx="490" cy="180" r="18" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="505" cy="220" r="22" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="495" cy="280" r="20" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="510" cy="340" r="24" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="500" cy="410" r="19" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="515" cy="480" r="23" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="505" cy="560" r="21" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="495" cy="640" r="25" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="510" cy="720" r="20" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    <circle cx="500" cy="800" r="22" fill="url(#marigoldGrad)" filter="url(#softGlow)"/>
+    
+    <!-- Rose accents right -->
+    <circle cx="470" cy="200" r="14" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="480" cy="260" r="16" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="475" cy="320" r="13" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="485" cy="390" r="15" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="480" cy="460" r="14" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="490" cy="540" r="17" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="475" cy="620" r="13" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="485" cy="700" r="16" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    <circle cx="480" cy="780" r="14" fill="url(#roseGrad)" filter="url(#softGlow)"/>
+    
+    <!-- Green leaves accent right -->
+    <ellipse cx="460" cy="240" rx="8" ry="12" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="465" cy="300" rx="10" ry="14" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="460" cy="370" rx="9" ry="13" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="465" cy="440" rx="11" ry="15" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="460" cy="520" rx="8" ry="12" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="465" cy="600" rx="10" ry="14" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="460" cy="680" rx="9" ry="13" fill="#2D5016" opacity="0.7"/>
+    <ellipse cx="465" cy="760" rx="11" ry="15" fill="#2D5016" opacity="0.7"/>
+  </g>
+  
+  <!-- Top arch decorations - temple style kalash and bells -->
+  <g class="top-arch">
+    <!-- Central kalash -->
+    <path d="M280,60 L320,60 L315,90 Q300,100 285,90 Z" fill="#D4AF37" opacity="0.9"/>
+    <circle cx="300" cy="55" r="8" fill="#FFA500"/>
+    <path d="M295,45 Q300,35 305,45" fill="none" stroke="#D4AF37" stroke-width="2"/>
+    
+    <!-- Hanging bells -->
+    <path d="M250,80 L250,100 Q250,115 265,115 Q280,115 280,100 L280,80" 
+          fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.8"/>
+    <circle cx="265" cy="120" r="5" fill="#D4AF37"/>
+    
+    <path d="M320,80 L320,100 Q320,115 335,115 Q350,115 350,100 L350,80" 
+          fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.8"/>
+    <circle cx="335" cy="120" r="5" fill="#D4AF37"/>
+    
+    <!-- Decorative toran elements -->
+    <path d="M200,70 Q220,90 240,70" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.6"/>
+    <path d="M360,70 Q380,90 400,70" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.6"/>
+  </g>
+  
+  <!-- Subtle paisley pattern overlay for texture -->
+  <g class="paisley-bg" opacity="0.08">
+    <path d="M150,850 Q140,830 150,810 Q160,830 150,850" fill="#D4AF37"/>
+    <path d="M450,850 Q440,830 450,810 Q460,830 450,850" fill="#D4AF37"/>
+    <path d="M150,650 Q140,630 150,610 Q160,630 150,650" fill="#D4AF37"/>
+    <path d="M450,650 Q440,630 450,610 Q460,630 450,650" fill="#D4AF37"/>
+    <path d="M150,450 Q140,430 150,410 Q160,430 150,450" fill="#D4AF37"/>
+    <path d="M450,450 Q440,430 450,410 Q460,430 450,450" fill="#D4AF37"/>
+  </g>
+  
+  <!-- Central opening space for content -->
+  <rect x="180" y="150" width="240" height="700" fill="transparent"/>
+</svg>
