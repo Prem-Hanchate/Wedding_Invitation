@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 90" preserveAspectRatio="xMidYMin slice">
+  <defs>
+    <linearGradient id="tgOrange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="55%" stop-color="#FF8C00"/>
+      <stop offset="100%" stop-color="#E8630A"/>
+    </linearGradient>
+    <linearGradient id="tgDeep" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E94560"/>
+      <stop offset="100%" stop-color="#A83248"/>
+    </linearGradient>
+    <linearGradient id="tgLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A7C2E"/>
+      <stop offset="100%" stop-color="#2D5016"/>
+    </linearGradient>
+    <radialGradient id="tgFlower" cx="38%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#FFD27A"/>
+      <stop offset="55%" stop-color="#FF9E1B"/>
+      <stop offset="100%" stop-color="#E8630A"/>
+    </radialGradient>
+
+    <!-- one hanging strand: leaf + graduated marigolds -->
+    <g id="tgStrand">
+      <path d="M0,0 Q-3,10 0,18" fill="none" stroke="#D4AF37" stroke-width="1.4"/>
+      <path d="M0,4 Q-8,10 -3,20 Q2,12 0,4 Z" fill="url(#tgLeaf)" opacity="0.95"/>
+      <path d="M0,4 Q8,10 3,20 Q-2,12 0,4 Z" fill="url(#tgLeaf)" opacity="0.85"/>
+      <circle cx="0" cy="26" r="7" fill="url(#tgFlower)"/>
+      <circle cx="0" cy="26" r="3" fill="#FFD27A" opacity="0.7"/>
+      <circle cx="0" cy="40" r="5.5" fill="url(#tgDeep)"/>
+      <circle cx="0" cy="40" r="2.2" fill="#FFB3C1" opacity="0.6"/>
+      <circle cx="0" cy="51" r="4" fill="url(#tgFlower)"/>
+    </g>
+  </defs>
+
+  <!-- drape strings -->
+  <path d="M0,6 Q75,34 150,6 T300,6 T450,6 T600,6" fill="none" stroke="#D4AF37" stroke-width="2.4" opacity="0.9"/>
+  <path d="M0,2 Q75,26 150,2 T300,2 T450,2 T600,2" fill="none" stroke="#8B7321" stroke-width="1.2" opacity="0.6"/>
+
+  <!-- top garland ridge -->
+  <g>
+    <circle cx="10" cy="6" r="8" fill="url(#tgFlower)"/><circle cx="30" cy="9" r="8" fill="url(#tgFlower)"/>
+    <circle cx="50" cy="13" r="8" fill="url(#tgDeep)"/><circle cx="70" cy="17" r="8" fill="url(#tgFlower)"/>
+    <circle cx="90" cy="19" r="8" fill="url(#tgFlower)"/><circle cx="110" cy="17" r="8" fill="url(#tgDeep)"/>
+    <circle cx="130" cy="12" r="8" fill="url(#tgFlower)"/><circle cx="150" cy="8" r="8" fill="url(#tgFlower)"/>
+    <circle cx="170" cy="12" r="8" fill="url(#tgDeep)"/><circle cx="190" cy="17" r="8" fill="url(#tgFlower)"/>
+    <circle cx="210" cy="19" r="8" fill="url(#tgFlower)"/><circle cx="230" cy="17" r="8" fill="url(#tgDeep)"/>
+    <circle cx="250" cy="12" r="8" fill="url(#tgFlower)"/><circle cx="270" cy="8" r="8" fill="url(#tgFlower)"/>
+    <circle cx="290" cy="7" r="8" fill="url(#tgDeep)"/><circle cx="310" cy="8" r="8" fill="url(#tgFlower)"/>
+    <circle cx="330" cy="12" r="8" fill="url(#tgFlower)"/><circle cx="350" cy="17" r="8" fill="url(#tgDeep)"/>
+    <circle cx="370" cy="19" r="8" fill="url(#tgFlower)"/><circle cx="390" cy="17" r="8" fill="url(#tgFlower)"/>
+    <circle cx="410" cy="12" r="8" fill="url(#tgDeep)"/><circle cx="430" cy="8" r="8" fill="url(#tgFlower)"/>
+    <circle cx="450" cy="7" r="8" fill="url(#tgFlower)"/><circle cx="470" cy="8" r="8" fill="url(#tgDeep)"/>
+    <circle cx="490" cy="12" r="8" fill="url(#tgFlower)"/><circle cx="510" cy="17" r="8" fill="url(#tgFlower)"/>
+    <circle cx="530" cy="19" r="8" fill="url(#tgDeep)"/><circle cx="550" cy="17" r="8" fill="url(#tgFlower)"/>
+    <circle cx="570" cy="12" r="8" fill="url(#tgFlower)"/><circle cx="592" cy="7" r="8" fill="url(#tgDeep)"/>
+  </g>
+
+  <!-- hanging strands along the drape low points -->
+  <use href="#tgStrand" transform="translate(38,14)"/>
+  <use href="#tgStrand" transform="translate(112,20) scale(1.15)"/>
+  <use href="#tgStrand" transform="translate(188,20)"/>
+  <use href="#tgStrand" transform="translate(262,10) scale(.9)"/>
+  <use href="#tgStrand" transform="translate(338,12) scale(1.1)"/>
+  <use href="#tgStrand" transform="translate(412,20)"/>
+  <use href="#tgStrand" transform="translate(488,18) scale(1.15)"/>
+  <use href="#tgStrand" transform="translate(562,10) scale(.9)"/>
+
+  <!-- leaves peeking between strands -->
+  <g fill="url(#tgLeaf)" opacity="0.9">
+    <path d="M75,22 Q80,34 74,42 Q68,32 75,22 Z"/>
+    <path d="M225,22 Q230,34 224,42 Q218,32 225,22 Z"/>
+    <path d="M375,22 Q380,34 374,42 Q368,32 375,22 Z"/>
+    <path d="M525,20 Q530,32 524,40 Q518,30 525,20 Z"/>
+  </g>
+</svg>

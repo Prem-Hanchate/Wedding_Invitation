@@ -8,30 +8,56 @@
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- generate soft petal fields (SVG layers) ---------- */
-  function buildPetals(svg, count) {
-    const ns = "http://www.w3.org/2000/svg";
-    svg.setAttribute("viewBox", "0 0 100 100");
-    svg.setAttribute("preserveAspectRatio", "none");
-    const colors = ["#FF9E1B", "#E8630A", "#FFC24B", "#E94560", "#F0DFB4"];
-    for (let i = 0; i < count; i += 1) {
-      const petal = document.createElementNS(ns, "ellipse");
-      petal.setAttribute("cx", (Math.random() * 100).toFixed(2));
-      petal.setAttribute("cy", (Math.random() * 100).toFixed(2));
-      petal.setAttribute("rx", (0.35 + Math.random() * 0.55).toFixed(2));
-      petal.setAttribute("ry", (0.7 + Math.random() * 1.1).toFixed(2));
-      petal.setAttribute("fill", colors[Math.floor(Math.random() * colors.length)]);
-      petal.setAttribute("opacity", (0.18 + Math.random() * 0.4).toFixed(2));
-      petal.setAttribute("transform", `rotate(${(Math.random() * 360).toFixed(0)} ${petal.getAttribute("cx")} ${petal.getAttribute("cy")})`);
-      svg.appendChild(petal);
-    }
-  }
+  /* ---------- falling marigold & rose flowers (DOM layer, smooth downward drift) ---------- */
+  const flowerLayer = document.getElementById("flowerLayer");
+  if (flowerLayer && !reducedMotion) {
+    const FLOWER_COLORS = [
+      ["#FF9E1B", "#E8630A"], // marigold orange
+      ["#FFC24B", "#FF9E1B"], // golden marigold
+      ["#E94560", "#B3123A"], // rose red
+      ["#F0DFB4", "#D8B370"], // cream / gold
+      ["#F4A6C0", "#D96C8E"]  // lotus pink
+    ];
+    const count = innerWidth < 600 ? 14 : 24;
 
-  if (!reducedMotion) {
-    const layer1 = document.getElementById("petalLayer1");
-    const layer2 = document.getElementById("petalLayer2");
-    if (layer1) buildPetals(layer1, innerWidth < 600 ? 34 : 60);
-    if (layer2) buildPetals(layer2, innerWidth < 600 ? 22 : 40);
+    function makeFlower() {
+      const colors = FLOWER_COLORS[Math.floor(Math.random() * FLOWER_COLORS.length)];
+      const size = 10 + Math.random() * 12;
+      const wrap = document.createElement("span");
+      wrap.className = "falling-flower";
+      wrap.style.left = (Math.random() * 100).toFixed(2) + "%";
+      wrap.style.setProperty("--fall-duration", (9 + Math.random() * 9).toFixed(1) + "s");
+      wrap.style.setProperty("--fall-delay", (-Math.random() * 16).toFixed(1) + "s");
+      wrap.style.setProperty("--sway-x", (Math.random() * 90 - 45).toFixed(0) + "px");
+      wrap.style.setProperty("--spin", (Math.random() < .5 ? -1 : 1) * (360 + Math.random() * 540).toFixed(0) + "deg");
+      wrap.style.setProperty("--flower-size", size.toFixed(1) + "px");
+      wrap.style.opacity = (0.55 + Math.random() * 0.4).toFixed(2);
+
+      const svgNS = "http://www.w3.org/2000/svg";
+      const svg = document.createElementNS(svgNS, "svg");
+      svg.setAttribute("viewBox", "0 0 24 24");
+      for (let pIdx = 0; pIdx < 5; pIdx += 1) {
+        const petal = document.createElementNS(svgNS, "ellipse");
+        petal.setAttribute("cx", "12");
+        petal.setAttribute("cy", "6.4");
+        petal.setAttribute("rx", "3.1");
+        petal.setAttribute("ry", "5.4");
+        petal.setAttribute("fill", pIdx % 2 === 0 ? colors[0] : colors[1]);
+        petal.setAttribute("transform", `rotate(${pIdx * 72} 12 12)`);
+        svg.appendChild(petal);
+      }
+      const core = document.createElementNS(svgNS, "circle");
+      core.setAttribute("cx", "12");
+      core.setAttribute("cy", "12");
+      core.setAttribute("r", "2.6");
+      core.setAttribute("fill", "#7a4a12");
+      svg.appendChild(core);
+
+      wrap.appendChild(svg);
+      return wrap;
+    }
+
+    for (let i = 0; i < count; i += 1) flowerLayer.appendChild(makeFlower());
   }
 
   /* ---------- scroll reveal choreography ---------- */
