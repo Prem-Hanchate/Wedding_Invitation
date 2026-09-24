@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import PortalIntro from "../components/PortalIntro.astro";
 import ParticleField from "../components/ParticleField.astro";
+import WeddingDecor from "../components/WeddingDecor.astro";
 import ScratchCard from "../components/ScratchCard.astro";
 import Countdown from "../components/Countdown.astro";
 import CalendarButtons from "../components/CalendarButtons.astro";
@@ -13,6 +14,12 @@ import RsvpSection from "../components/RsvpSection.astro";
 import ShareButton from "../components/ShareButton.astro";
 import MusicToggle from "../components/MusicToggle.astro";
 import PwaRegister from "../components/PwaRegister.astro";
+
+import ganesh from "../assets/illustrations/icon-ganesh.svg?url";
+import toran from "../assets/illustrations/toran-garland.svg?url";
+import diya from "../assets/illustrations/icon-diya.svg?url";
+import corner from "../assets/illustrations/corner-flourish.svg?url";
+import kalash from "../assets/illustrations/icon-kalash.svg?url";
 ---
 <!doctype html>
 <html lang="en">
@@ -30,23 +37,39 @@ import PwaRegister from "../components/PwaRegister.astro";
   <body>
     <PortalIntro />
     <ParticleField />
+    <WeddingDecor />
     <MusicToggle />
     <main id="invitation" class="invitation" aria-hidden="true">
       <section class="hero-section">
         <div class="hero-glow"></div>
+        <div class="toran-wrap" aria-hidden="true"><img class="toran" src={toran} alt="" /></div>
+        <div class="hero-diyas" aria-hidden="true">
+          <img class="hanging-diya left" src={diya} alt="" />
+          <img class="hanging-diya right" src={diya} alt="" />
+        </div>
         <div class="hero-content">
+          <img class="ganesh-blessing" src={ganesh} alt="Shri Ganesh — blessing the celebration" />
+          <p class="shloka">॥ श्री गणेशाय नमः ॥<br/><span style={{ fontSize: "0.82em", opacity: 0.75 }}>सिद्धीरर्थं च गायकाय नमः</span></p>
           <p class="eyebrow">Together with their families</p>
           <div class="hero-ornament"><span></span><b>✦</b><span></span></div>
           <h1>Siddhesh <em>&amp;</em> Priyanka</h1>
           <p class="hero-subtitle">Are getting married</p>
         </div>
+        <div class="hero-scroll-hint" aria-hidden="true">
+          <span>Scroll to celebrate</span>
+          <span class="chevrons">⌄<br/>⌄</span>
+        </div>
       </section>
       <section class="story-section">
         <div class="section-inner">
+          <img class="story-frame-corner tl" src={corner} alt="" aria-hidden="true" />
+          <img class="story-frame-corner tr" src={corner} alt="" aria-hidden="true" />
+          <img class="story-frame-corner bl" src={corner} alt="" aria-hidden="true" />
+          <img class="story-frame-corner br" src={corner} alt="" aria-hidden="true" />
           <p class="section-label">A new chapter</p>
           <h2>Two hearts,<br /><em>one beautiful journey.</em></h2>
           <p class="story-text">With hearts full of happiness, Siddhesh and Priyanka invite you to be a part of their special day and celebrate the beginning of their forever.</p>
-          <div class="gold-line"></div>
+          <div class="story-divider"><span></span><img src={kalash} alt="" aria-hidden="true" /><span></span></div>
         </div>
       </section>
       <ScratchCard />
@@ -56,7 +79,16 @@ import PwaRegister from "../components/PwaRegister.astro";
       <LocationSection />
       <GuestWishes />
       
-      <footer><div>Thank you</div><p>Siddhesh & Priyanka | 19 December 2026</p></footer>
+      <footer>
+        <div class="footer-diyas" aria-hidden="true">
+          <img src={diya} alt="" />
+          <img src={diya} alt="" />
+          <img src={diya} alt="" />
+        </div>
+        <img class="footer-flourish" src={toran} alt="" aria-hidden="true" style={{ transform: "scaleY(-1)" }} />
+        <div>Thank you</div>
+        <p>Siddhesh & Priyanka | 19 December 2026</p>
+      </footer>
     </main>
     <script src="../scripts/interactive.js"></script>
     <PwaRegister />

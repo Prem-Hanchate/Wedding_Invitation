@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120" preserveAspectRatio="xMidYMin meet">
+  <defs>
+    <linearGradient id="cgLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A7C2E"/>
+      <stop offset="100%" stop-color="#2D5016"/>
+    </linearGradient>
+    <radialGradient id="cgFlower" cx="38%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#FFD27A"/>
+      <stop offset="55%" stop-color="#FF9E1B"/>
+      <stop offset="100%" stop-color="#E8630A"/>
+    </radialGradient>
+    <linearGradient id="cgRose" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E94560"/>
+      <stop offset="100%" stop-color="#A83248"/>
+    </linearGradient>
+    <g id="cgDrop">
+      <path d="M0,0 Q-4,10 0,16" fill="none" stroke="#D4AF37" stroke-width="1.2"/>
+      <circle cx="0" cy="22" r="6" fill="url(#cgFlower)"/>
+      <circle cx="0" cy="34" r="4.4" fill="url(#cgRose)"/>
+    </g>
+  </defs>
+
+  <!-- swag string -->
+  <path d="M0,4 Q150,30 300,30 Q450,30 600,4" fill="none" stroke="#D4AF37" stroke-width="2.2" opacity="0.9"/>
+  <path d="M0,10 Q150,38 300,38 Q450,38 600,10" fill="none" stroke="#8B7321" stroke-width="1" opacity="0.55"/>
+
+  <!-- mango leaves fanned along the swag -->
+  <g fill="url(#cgLeaf)">
+    <path d="M60,14 Q66,30 58,40 Q52,26 60,14 Z"/>
+    <path d="M110,21 Q116,37 108,47 Q102,33 110,21 Z"/>
+    <path d="M160,26 Q166,42 158,52 Q152,38 160,26 Z"/>
+    <path d="M210,29 Q216,45 208,55 Q202,41 210,29 Z"/>
+    <path d="M260,31 Q266,47 258,57 Q252,43 260,31 Z"/>
+    <path d="M340,31 Q334,47 342,57 Q348,43 340,31 Z"/>
+    <path d="M390,29 Q384,45 392,55 Q398,41 390,29 Z"/>
+    <path d="M440,26 Q434,42 442,52 Q448,38 440,26 Z"/>
+    <path d="M490,21 Q484,37 492,47 Q498,33 490,21 Z"/>
+    <path d="M540,14 Q534,30 542,40 Q548,26 540,14 Z"/>
+  </g>
+
+  <!-- flower beads along both strings -->
+  <g>
+    <circle cx="30" cy="9" r="5.5" fill="url(#cgFlower)"/>
+    <circle cx="85" cy="20" r="5.5" fill="url(#cgRose)"/>
+    <circle cx="135" cy="25" r="5.5" fill="url(#cgFlower)"/>
+    <circle cx="185" cy="29" r="5.5" fill="url(#cgRose)"/>
+    <circle cx="235" cy="31" r="5.5" fill="url(#cgFlower)"/>
+    <circle cx="300" cy="32" r="6.5" fill="url(#cgRose)"/>
+    <circle cx="365" cy="31" r="5.5" fill="url(#cgFlower)"/>
+    <circle cx="415" cy="29" r="5.5" fill="url(#cgRose)"/>
+    <circle cx="465" cy="25" r="5.5" fill="url(#cgFlower)"/>
+    <circle cx="515" cy="20" r="5.5" fill="url(#cgRose)"/>
+    <circle cx="570" cy="9" r="5.5" fill="url(#cgFlower)"/>
+  </g>
+
+  <!-- dangling drops -->
+  <use href="#cgDrop" transform="translate(135,30)"/>
+  <use href="#cgDrop" transform="translate(235,36) scale(1.1)"/>
+  <use href="#cgDrop" transform="translate(300,38) scale(1.25)"/>
+  <use href="#cgDrop" transform="translate(365,36) scale(1.1)"/>
+  <use href="#cgDrop" transform="translate(465,30)"/>
+</svg>
