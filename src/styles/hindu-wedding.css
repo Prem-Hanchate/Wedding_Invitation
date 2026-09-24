@@ -9,6 +9,13 @@
   z-index: 15;
   pointer-events: none;
   overflow: hidden;
+  opacity: 0;
+  transition: opacity .9s ease;
+}
+
+.invitation.visible ~ .wedding-ambient,
+body:not(.intro-active) .wedding-ambient {
+  opacity: 1;
 }
 
 /* =========================================================
@@ -697,4 +704,63 @@
   .invitation.visible .hero-content > * { animation: none; }
   .story-divider span { transform: scaleX(1); }
   .section-divider, .story-divider { opacity: .9; }
+}
+
+/* =========================================================
+   RESPONSIVE POLISH — mobile & desktop animation fidelity
+   ========================================================= */
+
+/* falling flowers use the dynamic viewport height so they always
+   travel fully across tall/short phone screens (address bar aware) */
+@supports (height: 100dvh) {
+  @keyframes flower-fall {
+    0% {
+      transform: translate3d(0, -10dvh, 0);
+      opacity: 0;
+    }
+    8% {
+      opacity: 1;
+    }
+    50% {
+      transform: translate3d(calc(var(--sway-x, 30px) * .6), 52dvh, 0);
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate3d(var(--sway-x, 30px), 112dvh, 0);
+      opacity: 0;
+    }
+  }
+}
+
+/* phones: keep the couple stroll compact and the petals inside the stage */
+@media (max-width: 600px) {
+  .couple-stage {
+    width: min(88%, 260px);
+  }
+  @keyframes petal-shower {
+    0%   { transform: translateY(-10px) translateX(0) rotate(0deg); opacity: 0; }
+    10%  { opacity: 1; }
+    100% { transform: translateY(110px) translateX(14px) rotate(300deg); opacity: 0; }
+  }
+  .shivling-wrap {
+    margin-top: 30px;
+  }
+}
+
+/* landscape phones: shorter fall distance keeps density pleasant */
+@media (max-height: 480px) and (orientation: landscape) {
+  .falling-flower {
+    --flower-size: 12px;
+  }
+}
+
+/* iOS Safari: force GPU compositing for buttery ambient motion */
+@supports (-webkit-touch-callout: none) {
+  .falling-flower,
+  .floating-diya,
+  .couple-img {
+    transform: translateZ(0);
+  }
 }
