@@ -1,0 +1,497 @@
+/* =========================================================
+   HINDU WEDDING — AMBIENT LAYERS
+   Marigold petals, floating diyas, golden rangoli sparkles
+   ========================================================= */
+
+.wedding-ambient {
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.petal-layer {
+  position: absolute;
+  inset: -5% 0 0 0;
+  width: 100%;
+  height: 110%;
+  opacity: .9;
+  animation: petal-drift 28s linear infinite;
+  will-change: transform;
+}
+
+.petal-layer.second {
+  animation-duration: 44s;
+  animation-direction: reverse;
+  opacity: .65;
+}
+
+@keyframes petal-drift {
+  from { transform: translate3d(0, -25px, 0); }
+  to   { transform: translate3d(0, 25px, 0); }
+}
+
+.diya-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.floating-diya {
+  position: absolute;
+  width: clamp(26px, 5vw, 40px);
+  height: auto;
+  opacity: 0;
+  filter: drop-shadow(0 0 10px rgba(255, 170, 60, .55));
+  animation: diya-float 16s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.floating-diya:nth-child(1) { left: 6%;  bottom: -60px; animation-delay: 0s;   animation-duration: 17s; }
+.floating-diya:nth-child(2) { left: 82%; bottom: -60px; animation-delay: 5s;   animation-duration: 20s; }
+.floating-diya:nth-child(3) { left: 40%; bottom: -60px; animation-delay: 10.5s; animation-duration: 18s; }
+
+@keyframes diya-float {
+  0%        { transform: translateY(0) translateX(0) rotate(-4deg) scale(.85); opacity: 0; }
+  12%       { opacity: .9; }
+  50%       { transform: translateY(-55svh) translateX(22px) rotate(5deg) scale(1); opacity: .85; }
+  82%       { opacity: .5; }
+  100%      { transform: translateY(-108svh) translateX(-14px) rotate(-4deg) scale(.9); opacity: 0; }
+}
+
+.diya-flame {
+  transform-origin: 50% 100%;
+  animation: diya-flicker 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes diya-flicker {
+  from { transform: scale(1) skewX(0deg); opacity: .95; }
+  40%  { transform: scale(1.12, .92) skewX(3deg); opacity: 1; }
+  to   { transform: scale(.92, 1.1) skewX(-3deg); opacity: .85; }
+}
+
+/* =========================================================
+   GANESH BLESSING & SHLOKA (hero)
+   ========================================================= */
+
+.ganesh-blessing {
+  width: clamp(74px, 16vw, 104px);
+  height: auto;
+  margin: 0 auto 18px;
+  display: block;
+  filter: drop-shadow(0 0 18px rgba(216, 179, 112, .45));
+  animation: ganesh-glow 4.5s ease-in-out infinite;
+}
+
+@keyframes ganesh-glow {
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(216, 179, 112, .3)); transform: scale(1); }
+  50%      { filter: drop-shadow(0 0 26px rgba(240, 223, 180, .65)); transform: scale(1.04); }
+}
+
+.shloka {
+  margin: 0 0 26px;
+  color: var(--gold);
+  font-size: clamp(14px, 3.4vw, 19px);
+  letter-spacing: .06em;
+  line-height: 1.7;
+  opacity: .9;
+}
+
+/* Hero entrance choreography */
+.hero-content > * {
+  opacity: 0;
+  transform: translateY(26px);
+}
+
+.invitation.visible .hero-content > * {
+  animation: hero-rise 1s cubic-bezier(.22, .68, .2, 1) forwards;
+}
+
+.invitation.visible .hero-content > *:nth-child(1) { animation-delay: .15s; }
+.invitation.visible .hero-content > *:nth-child(2) { animation-delay: .3s; }
+.invitation.visible .hero-content > *:nth-child(3) { animation-delay: .45s; }
+.invitation.visible .hero-content > *:nth-child(4) { animation-delay: .6s; }
+.invitation.visible .hero-content > *:nth-child(5) { animation-delay: .75s; }
+.invitation.visible .hero-content > *:nth-child(6) { animation-delay: .9s; }
+.invitation.visible .hero-content > *:nth-child(7) { animation-delay: 1.05s; }
+
+@keyframes hero-rise {
+  to { opacity: 1; transform: none; }
+}
+
+/* Shimmer sweep across the couple names */
+.hero-content h1 {
+  position: relative;
+}
+
+.hero-content h1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 244, 214, .55) 48%, transparent 62%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.invitation.visible .hero-content h1::after {
+  animation: gold-shimmer 5.5s ease-in-out 1.6s infinite;
+}
+
+@keyframes gold-shimmer {
+  0%   { background-position: 200% 0; opacity: 0; }
+  8%   { opacity: 1; }
+  38%  { background-position: -60% 0; opacity: 0; }
+  100% { background-position: -60% 0; opacity: 0; }
+}
+
+/* Gentle sway for the hero ornament diamond */
+.hero-ornament b {
+  display: inline-block;
+  animation: ornament-spin 6s ease-in-out infinite;
+}
+
+@keyframes ornament-spin {
+  0%, 100% { transform: rotate(0deg) scale(1); opacity: .8; }
+  50%      { transform: rotate(180deg) scale(1.25); opacity: 1; }
+}
+
+/* Scroll hint in hero */
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(247, 239, 224, .65);
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 1s ease 2s;
+}
+
+.invitation.visible .hero-scroll-hint { opacity: 1; }
+
+.hero-scroll-hint .chevrons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--gold);
+  font-size: 14px;
+  line-height: .8;
+  animation: hint-bounce 2s ease-in-out infinite;
+}
+
+@keyframes hint-bounce {
+  0%, 100% { transform: translateY(0); opacity: .55; }
+  50%      { transform: translateY(8px); opacity: 1; }
+}
+
+/* =========================================================
+   TORAN GARLANDS + SWinging HERO DIyas
+   ========================================================= */
+
+.toran-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.toran {
+  display: block;
+  width: 100%;
+  height: clamp(46px, 9vw, 78px);
+  object-fit: cover;
+  object-position: center top;
+  opacity: .95;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, .35));
+  animation: toran-sway 7s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+@keyframes toran-sway {
+  0%, 100% { transform: rotate(-.5deg) translateY(0); }
+  50%      { transform: rotate(.6deg) translateY(3px); }
+}
+
+.hero-diyas {
+  position: absolute;
+  top: clamp(30px, 6vw, 56px);
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 clamp(14px, 6vw, 90px);
+  pointer-events: none;
+}
+
+.hanging-diya {
+  width: clamp(30px, 6vw, 44px);
+  height: auto;
+  transform-origin: top center;
+  animation: diya-swing 4.2s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(255, 170, 60, .5));
+}
+
+.hanging-diya.right { animation-delay: 1.3s; animation-duration: 4.8s; }
+.hanging-diya.left  { animation-delay: .6s; }
+
+@keyframes diya-swing {
+  0%, 100% { transform: rotate(-7deg); }
+  50%      { transform: rotate(7deg); }
+}
+
+/* =========================================================
+   SCROLL REVEAL SYSTEM
+   ========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity .9s ease, transform .9s cubic-bezier(.22, .68, .2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.from-left  { transform: translateX(-44px); }
+.reveal.from-right { transform: translateX(44px); }
+.reveal.zoom       { transform: scale(.9) translateY(18px); }
+
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-stagger.in-view > * {
+  animation: stagger-rise .8s cubic-bezier(.22, .68, .2, 1) both;
+}
+
+.reveal-stagger.in-view > *:nth-child(1) { animation-delay: .05s; }
+.reveal-stagger.in-view > *:nth-child(2) { animation-delay: .22s; }
+.reveal-stagger.in-view > *:nth-child(3) { animation-delay: .39s; }
+.reveal-stagger.in-view > *:nth-child(4) { animation-delay: .56s; }
+
+@keyframes stagger-rise {
+  from { opacity: 0; transform: translateY(36px) scale(.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Section dividers draw themselves in */
+.section-divider,
+.story-divider {
+  opacity: 0;
+  transition: opacity .8s ease .2s;
+}
+
+.in-view .section-divider,
+.in-view .story-divider,
+.section-divider.in-view,
+.story-divider.in-view {
+  opacity: .9;
+}
+
+/* =========================================================
+   EVENTS — mandap cards with garland strings & lamps
+   ========================================================= */
+
+.event-card {
+  overflow: hidden;
+  transition: transform .45s cubic-bezier(.22, .68, .2, 1), box-shadow .45s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 44px -18px rgba(76, 13, 24, .55);
+}
+
+.card-garland {
+  position: absolute;
+  top: 0;
+  left: -4%;
+  width: 108%;
+  height: auto;
+  opacity: .95;
+  transform-origin: top center;
+  animation: toran-sway 5.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.event-card:nth-child(2) .card-garland { animation-delay: .8s; }
+.event-card:nth-child(4) .card-garland { animation-delay: 2.2s; }
+.event-card:nth-child(3) .card-garland { animation-delay: 1.6s; }
+
+.event-icon {
+  transition: transform .5s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+.event-card:hover .event-icon {
+  transform: scale(1.18) rotate(-6deg);
+}
+
+.card-lamp {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  width: 26px;
+  height: auto;
+  transform: translateX(-50%);
+  opacity: .9;
+  filter: drop-shadow(0 0 8px rgba(255, 170, 60, .5));
+  animation: lamp-breathe 3s ease-in-out infinite;
+}
+
+.event-card:nth-child(2) .card-lamp { animation-delay: 1s; }
+.event-card:nth-child(3) .card-lamp { animation-delay: 2s; }
+.event-card:nth-child(4) .card-lamp { animation-delay: .5s; }
+
+@keyframes lamp-breathe {
+  0%, 100% { opacity: .55; transform: translateX(-50%) scale(.96); }
+  50%      { opacity: 1; transform: translateX(-50%) scale(1.06); }
+}
+
+/* =========================================================
+   STORY SECTION — decorative frame & animated divider
+   ========================================================= */
+
+.story-section .section-inner {
+  position: relative;
+  padding: 46px 18px;
+}
+
+.story-frame-corner {
+  position: absolute;
+  width: clamp(44px, 9vw, 72px);
+  height: auto;
+  opacity: .8;
+  pointer-events: none;
+}
+
+.story-frame-corner.tl { top: 0; left: 0; }
+.story-frame-corner.tr { top: 0; right: 0; transform: scaleX(-1); }
+.story-frame-corner.bl { bottom: 0; left: 0; transform: scaleY(-1); }
+.story-frame-corner.br { bottom: 0; right: 0; transform: scale(-1); }
+
+.story-divider {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+  width: min(100%, 460px);
+  margin: 38px auto 0;
+}
+
+.story-divider span {
+  flex: 1;
+  height: 1px;
+  margin-top: 12px;
+  background: linear-gradient(90deg, transparent, #b78a4a);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 1.2s ease .3s;
+}
+
+.story-divider span:last-of-type {
+  background: linear-gradient(270deg, transparent, #b78a4a);
+  transform-origin: left center;
+}
+
+.in-view .story-divider span { transform: scaleX(1); }
+
+.story-divider img {
+  width: clamp(46px, 10vw, 64px);
+  height: auto;
+  animation: kalash-bob 3.6s ease-in-out infinite;
+}
+
+@keyframes kalash-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+/* =========================================================
+   COUNTDOWN — pulsing heartbeat seconds
+   ========================================================= */
+
+.countdown-grid strong {
+  transition: transform .2s ease;
+}
+
+.countdown-grid > div:last-child strong.tick {
+  animation: count-pop .5s ease;
+}
+
+@keyframes count-pop {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(1.12); color: #fff3d6; }
+  100% { transform: scale(1); }
+}
+
+/* =========================================================
+   FOOTER — diyas & marigold flourish
+   ========================================================= */
+
+.footer-diyas {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  margin-bottom: 18px;
+}
+
+.footer-diyas img {
+  width: 34px;
+  height: auto;
+  filter: drop-shadow(0 0 8px rgba(255, 170, 60, .55));
+  animation: lamp-breathe 3.2s ease-in-out infinite;
+}
+
+.footer-diyas img:nth-child(2) { animation-delay: .9s; }
+.footer-diyas img:nth-child(3) { animation-delay: 1.8s; }
+
+.footer-flourish {
+  width: min(70%, 240px);
+  height: auto;
+  margin: 0 auto 14px;
+  display: block;
+  opacity: .8;
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .petal-layer,
+  .floating-diya,
+  .diya-flame,
+  .ganesh-blessing,
+  .toran,
+  .hanging-diya,
+  .card-garland,
+  .card-lamp,
+  .footer-diyas img,
+  .hero-ornament b,
+  .hero-scroll-hint .chevrons,
+  .story-divider img,
+  .invitation.visible .hero-content h1::after {
+    animation: none !important;
+  }
+  .floating-diya { opacity: .7; }
+  .reveal, .reveal.from-left, .reveal.from-right, .reveal.zoom { opacity: 1; transform: none; transition: none; }
+  .hero-content > * { opacity: 1; transform: none; }
+  .invitation.visible .hero-content > * { animation: none; }
+  .story-divider span { transform: scaleX(1); }
+  .section-divider, .story-divider { opacity: .9; }
+}

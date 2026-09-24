@@ -1,5 +1,6 @@
 @import "../../style.css";
 @import "./features.css";
 @import "./envelope.css";
+@import "./hindu-wedding.css";
 
 /* Astro keeps the original visual system in one global stylesheet. */
