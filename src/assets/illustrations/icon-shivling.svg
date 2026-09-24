@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140">
+  <defs>
+    <linearGradient id="slStone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6f7d8c"/>
+      <stop offset="45%" stop-color="#4a5561"/>
+      <stop offset="100%" stop-color="#2e3742"/>
+    </linearGradient>
+    <linearGradient id="slBase" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5c6875"/>
+      <stop offset="100%" stop-color="#333d48"/>
+    </linearGradient>
+    <linearGradient id="slWater" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bfe6ff" stop-opacity=".0"/>
+      <stop offset="50%" stop-color="#dff2ff" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#bfe6ff" stop-opacity=".0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Yoni pedestal (square base) -->
+  <rect x="12" y="106" width="96" height="22" rx="5" fill="url(#slBase)" stroke="#d8b370" stroke-width="1.2"/>
+  <!-- Yoni spout / drain channel pointing forward-left -->
+  <path d="M12,112 L2,114 L2,121 L12,123 Z" fill="url(#slBase)" stroke="#d8b370" stroke-width="1"/>
+  <ellipse cx="3" cy="117.5" rx="2.4" ry="3.4" fill="#22303c" stroke="#d8b370" stroke-width=".8"/>
+  <!-- lotus petal carving on base -->
+  <path d="M24,128 Q30,120 36,128" fill="none" stroke="#d8b370" stroke-width="1" opacity=".7"/>
+  <path d="M42,128 Q48,120 54,128" fill="none" stroke="#d8b370" stroke-width="1" opacity=".7"/>
+  <path d="M60,128 Q66,120 72,128" fill="none" stroke="#d8b370" stroke-width="1" opacity=".7"/>
+  <path d="M78,128 Q84,120 90,128" fill="none" stroke="#d8b370" stroke-width="1" opacity=".7"/>
+
+  <!-- Yoni platform ellipse with hole -->
+  <ellipse cx="60" cy="104" rx="38" ry="11" fill="#48525e" stroke="#d8b370" stroke-width="1.2"/>
+  <ellipse cx="60" cy="103" rx="24" ry="7" fill="#22303c" stroke="#d8b370" stroke-width=".8" opacity=".9"/>
+
+  <!-- Shivling shaft — rounded top cylinder -->
+  <path d="M44,102 L44,44 Q44,20 60,14 Q76,20 76,44 L76,102 Q68,108 60,108 Q52,108 44,102 Z"
+        fill="url(#slStone)" stroke="#d8b370" stroke-width="1.4"/>
+  <!-- soft highlight -->
+  <path d="M50,96 L50,46 Q50,28 58,21 Q53,34 53,50 L53,96 Z" fill="#8fa0b0" opacity=".35"/>
+
+  <!-- Trishul mark (tilak) on the shaft -->
+  <g stroke="#d8b370" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <path d="M60,44 L60,66"/>
+    <path d="M53,48 Q53,60 60,64"/>
+    <path d="M67,48 Q67,60 60,64"/>
+    <path d="M53,48 L51.5,44.5 M53,48 L55,45.5"/>
+    <path d="M67,48 L68.5,44.5 M67,48 L65,45.5"/>
+    <path d="M60,44 L57.8,40 L62.2,40 Z" fill="#d8b370" stroke="none"/>
+  </g>
+
+  <!-- Bilva (three-leaf) offering near the top -->
+  <g fill="#2f6b2f" opacity=".95">
+    <path d="M60,26 Q55,18 60,12 Q65,18 60,26 Z"/>
+    <path d="M58,27 Q49,23 47,16 Q56,17 59,25 Z"/>
+    <path d="M62,27 Q71,23 73,16 Q64,17 61,25 Z"/>
+  </g>
+
+  <!-- Abhishek water / milk stream pouring over the crown -->
+  <path class="sl-stream" d="M60,0 L60,13" stroke="#eaf7ff" stroke-width="2.6" stroke-linecap="round" opacity=".85"/>
+  <ellipse class="sl-drip" cx="60" cy="15" rx="5" ry="2.2" fill="url(#slWater)"/>
+
+  <!-- Garland of flowers draped across the shivling -->
+  <path d="M42,60 Q60,74 78,60" fill="none" stroke="#8B4513" stroke-width="1.4" opacity=".8"/>
+  <g>
+    <circle cx="44" cy="61" r="3.4" fill="#FF9E1B"/>
+    <circle cx="51" cy="66" r="3.4" fill="#E8630A"/>
+    <circle cx="60" cy="69" r="3.4" fill="#FFC24B"/>
+    <circle cx="69" cy="66" r="3.4" fill="#E94560"/>
+    <circle cx="76" cy="61" r="3.4" fill="#FF9E1B"/>
+  </g>
+
+  <!-- Tiny diya flames at both corners of the base -->
+  <g class="sl-diya">
+    <ellipse cx="20" cy="106" rx="5" ry="2" fill="#b06a2a"/>
+    <path d="M20,104 Q17.5,99 20,95 Q22.5,99 20,104 Z" fill="#FFD34D"/>
+    <path d="M20,102 Q18.6,99 20,96.5 Q21.4,99 20,102 Z" fill="#FFF6CC"/>
+  </g>
+  <g class="sl-diya sl-diya-right">
+    <ellipse cx="100" cy="106" rx="5" ry="2" fill="#b06a2a"/>
+    <path d="M100,104 Q97.5,99 100,95 Q102.5,99 100,104 Z" fill="#FFD34D"/>
+    <path d="M100,102 Q98.6,99 100,96.5 Q101.4,99 100,102 Z" fill="#FFF6CC"/>
+  </g>
+
+  <!-- Om symbol floating above -->
+  <text x="60" y="9" text-anchor="middle" font-size="11" fill="#d8b370" font-family="serif">ॐ</text>
+</svg>

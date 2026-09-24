@@ -20,6 +20,8 @@ import toran from "../assets/illustrations/toran-garland.svg?url";
 import diya from "../assets/illustrations/icon-diya.svg?url";
 import corner from "../assets/illustrations/corner-flourish.svg?url";
 import kalash from "../assets/illustrations/icon-kalash.svg?url";
+import shivling from "../assets/illustrations/icon-shivling.svg?url";
+import couple from "../assets/illustrations/couple-animation.svg?url";
 ---
 <!doctype html>
 <html lang="en">
@@ -69,6 +71,18 @@ import kalash from "../assets/illustrations/icon-kalash.svg?url";
           <p class="section-label">A new chapter</p>
           <h2>Two hearts,<br /><em>one beautiful journey.</em></h2>
           <p class="story-text">With hearts full of happiness, Siddhesh and Priyanka invite you to be a part of their special day and celebrate the beginning of their forever.</p>
+
+          <!-- Shivling with abhishek, garland & diyas -->
+          <div class="shivling-wrap" aria-hidden="true">
+            <img class="shivling-img" src={shivling} alt="" loading="lazy" />
+            <div class="shivling-aura"></div>
+            <span class="shivling-spark s1">✦</span>
+            <span class="shivling-spark s2">✦</span>
+            <span class="shivling-spark s3">✦</span>
+            <span class="shivling-spark s4">✦</span>
+          </div>
+          <p class="shivling-mantra">॥ ॐ नमः शिवाय ॥</p>
+
           <div class="story-divider"><span></span><img src={kalash} alt="" aria-hidden="true" /><span></span></div>
         </div>
       </section>
@@ -80,6 +94,16 @@ import kalash from "../assets/illustrations/icon-kalash.svg?url";
       <GuestWishes />
       
       <footer>
+        <!-- animated bride & groom walking together -->
+        <div class="couple-stage" aria-hidden="true">
+          <img class="couple-img" src={couple} alt="" loading="lazy" />
+          <span class="couple-petal cp1"></span>
+          <span class="couple-petal cp2"></span>
+          <span class="couple-petal cp3"></span>
+          <span class="couple-petal cp4"></span>
+          <span class="couple-petal cp5"></span>
+        </div>
+        <p class="couple-caption">— Siddhesh weds Priyanka —</p>
         <div class="footer-diyas" aria-hidden="true">
           <img src={diya} alt="" />
           <img src={diya} alt="" />
