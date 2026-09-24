@@ -137,6 +137,27 @@
     elements.forEach((el) => el.classList.add("in-view"));
   }
 
+  /* bring the blessing hands together while moving down, then apart on the way back up */
+  const handsWrap = document.querySelector(".hands-wrap");
+  if (handsWrap && !reducedMotion) {
+    let previousScrollY = window.scrollY;
+    let scrollFrame = null;
+
+    const updateHands = () => {
+      const currentScrollY = window.scrollY;
+      if (Math.abs(currentScrollY - previousScrollY) > 1) {
+        handsWrap.classList.toggle("scrolling-down", currentScrollY > previousScrollY);
+        handsWrap.classList.toggle("scrolling-up", currentScrollY < previousScrollY);
+        previousScrollY = currentScrollY;
+      }
+      scrollFrame = null;
+    };
+
+    window.addEventListener("scroll", () => {
+      if (scrollFrame === null) scrollFrame = requestAnimationFrame(updateHands);
+    }, { passive: true });
+  }
+
   /* ---------- countdown heartbeat pulse on the seconds digit ---------- */
   const secondsEl = document.getElementById("seconds");
   if (secondsEl && !reducedMotion) {

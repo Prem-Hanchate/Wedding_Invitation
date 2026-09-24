@@ -15,12 +15,13 @@ import ShareButton from "../components/ShareButton.astro";
 import MusicToggle from "../components/MusicToggle.astro";
 import PwaRegister from "../components/PwaRegister.astro";
 
-import ganesh from "../assets/illustrations/icon-ganesh.svg?url";
 import toran from "../assets/illustrations/toran-garland.svg?url";
 import diya from "../assets/illustrations/icon-diya.svg?url";
 import corner from "../assets/illustrations/corner-flourish.svg?url";
 import kalash from "../assets/illustrations/icon-kalash.svg?url";
-import shivling from "../assets/illustrations/icon-shivling.svg?url";
+import ganeshaLogo from "../assets/illustrations/Ganesha Logo.svg?url";
+import blueLeftHand from "../assets/illustrations/Blue_left_hand.svg?url";
+import brownRightHand from "../assets/illustrations/brown_right_hand.svg?url";
 import couple from "../assets/illustrations/couple-animation.svg?url";
 ---
 <!doctype html>
@@ -50,7 +51,7 @@ import couple from "../assets/illustrations/couple-animation.svg?url";
           <img class="hanging-diya right" src={diya} alt="" />
         </div>
         <div class="hero-content">
-          <img class="ganesh-blessing" src={ganesh} alt="Shri Ganesh — blessing the celebration" />
+          <img src={ganeshaLogo} alt="Shri Ganesh" class="ganesh-icon" />
           <p class="shloka">॥ श्री गणेशाय नमः ॥<br/><span style={{ fontSize: "0.82em", opacity: 0.75 }}>सिद्धीरर्थं च गायकाय नमः</span></p>
           <p class="eyebrow">Together with their families</p>
           <div class="hero-ornament"><span></span><b>✦</b><span></span></div>
@@ -74,7 +75,10 @@ import couple from "../assets/illustrations/couple-animation.svg?url";
 
           <!-- Shivling with abhishek, garland & diyas -->
           <div class="shivling-wrap" aria-hidden="true">
-            <img class="shivling-img" src={shivling} alt="" loading="lazy" />
+            <div class="hands-wrap">
+              <img src={blueLeftHand} alt="" class="hand hand-left" />
+              <img src={brownRightHand} alt="" class="hand hand-right" />
+            </div>
             <div class="shivling-aura"></div>
             <span class="shivling-spark s1">✦</span>
             <span class="shivling-spark s2">✦</span>
