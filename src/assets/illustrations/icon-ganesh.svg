@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="gmHalo" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#F0DFB4" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#D8B370" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#D8B370" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gmGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="55%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#A87E1F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- radiant halo -->
+  <circle cx="50" cy="48" r="46" fill="url(#gmHalo)"/>
+  <g stroke="#D8B370" stroke-width="1.4" opacity="0.75">
+    <line x1="50" y1="4" x2="50" y2="12"/>
+    <line x1="26" y1="9" x2="29" y2="17"/>
+    <line x1="74" y1="9" x2="71" y2="17"/>
+    <line x1="8" y1="30" x2="15" y2="34"/>
+    <line x1="92" y1="30" x2="85" y2="34"/>
+  </g>
+
+  <!-- crown (mukut) -->
+  <path d="M36,26 L40,14 L46,23 L50,11 L54,23 L60,14 L64,26 Z" fill="url(#gmGold)" stroke="#8B7321" stroke-width="1"/>
+  <circle cx="50" cy="9" r="2.4" fill="#E94560" stroke="#8B7321" stroke-width="0.8"/>
+
+  <!-- ears -->
+  <path d="M31,40 Q18,38 19,52 Q20,64 32,60 Q28,50 31,40 Z" fill="url(#gmGold)" stroke="#8B7321" stroke-width="1.2"/>
+  <path d="M69,40 Q82,38 81,52 Q80,64 68,60 Q72,50 69,40 Z" fill="url(#gmGold)" stroke="#8B7321" stroke-width="1.2"/>
+
+  <!-- head -->
+  <circle cx="50" cy="44" r="17" fill="url(#gmGold)" stroke="#8B7321" stroke-width="1.4"/>
+
+  <!-- tilak -->
+  <path d="M50,31 Q47,37 50,42 Q53,37 50,31 Z" fill="#DC143C" opacity="0.85"/>
+
+  <!-- eyes -->
+  <path d="M42,44 Q45,41 47,44" fill="none" stroke="#5C3A10" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M53,44 Q55,41 58,44" fill="none" stroke="#5C3A10" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- trunk curving to the right -->
+  <path d="M50,48 Q50,58 46,64 Q42,70 46,75 Q50,79 55,75 Q58,72 56,68"
+        fill="none" stroke="#8B7321" stroke-width="5" stroke-linecap="round"/>
+  <path d="M50,48 Q50,58 46,64 Q42,70 46,75 Q50,79 55,75 Q58,72 56,68"
+        fill="none" stroke="url(#gmGold)" stroke-width="3.4" stroke-linecap="round"/>
+  <g stroke="#8B7321" stroke-width="0.7" opacity="0.6">
+    <path d="M48,55 L52,55"/>
+    <path d="M46,61 L51,61"/>
+    <path d="M45,67 L50,68"/>
+  </g>
+
+  <!-- tusk -->
+  <path d="M41,52 Q37,56 38,60" fill="none" stroke="#FFF6DD" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- modak sweet in hand -->
+  <path d="M68,66 L74,76 L62,76 Z" fill="#F5DEB3" stroke="#8B7321" stroke-width="1"/>
+  <path d="M68,66 L68,76 M64,70 L72,72 M72,70 L64,72" stroke="#C9A227" stroke-width="0.8" fill="none"/>
+
+  <!-- lotus -->
+  <g transform="translate(28,70)">
+    <path d="M0,6 Q-6,-2 0,-8 Q6,-2 0,6 Z" fill="#E94560" opacity="0.9"/>
+    <path d="M0,6 Q-10,2 -10,-4 Q-3,-4 0,6 Z" fill="#C73E54" opacity="0.85"/>
+    <path d="M0,6 Q10,2 10,-4 Q3,-4 0,6 Z" fill="#C73E54" opacity="0.85"/>
+    <path d="M-8,7 L8,7" stroke="#2D5016" stroke-width="1.6"/>
+  </g>
+
+  <!-- necklace -->
+  <path d="M38,60 Q50,70 62,60" fill="none" stroke="#D8B370" stroke-width="1.6" stroke-dasharray="1.5 3" stroke-linecap="round"/>
+</svg>
