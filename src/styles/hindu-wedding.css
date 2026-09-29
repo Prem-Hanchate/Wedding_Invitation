@@ -527,7 +527,7 @@ body:not(.intro-active) .wedding-ambient {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: clamp(180px, 24vw, 290px);
+  height: clamp(165px, 24vw, 290px);
   margin-left: 50%;
   overflow: hidden;
   transform: translateX(-50%);
@@ -536,27 +536,27 @@ body:not(.intro-active) .wedding-ambient {
 .hand {
   position: absolute;
   top: 0;
-  width: 52%;
+  width: 55%;
   max-width: 720px;
   height: auto;
 }
 
 .hand-left {
-  left: -2%;
+  left: -3%;
   transition: transform 420ms ease-out;
 }
 
 .hand-right {
-  right: -2%;
+  right: -3%;
   transition: transform 420ms ease-out;
 }
 
 .hands-wrap.scrolling-down .hand-left {
-  transform: translateX(34px);
+  transform: translateX(52px);
 }
 
 .hands-wrap.scrolling-down .hand-right {
-  transform: translateX(-34px);
+  transform: translateX(-52px);
 }
 
 .hands-wrap.scrolling-up .hand-left,
@@ -791,6 +791,24 @@ body:not(.intro-active) .wedding-ambient {
   }
   .shivling-wrap {
     margin-top: 30px;
+  }
+  .hands-wrap {
+    height: 155px;
+  }
+  .hand {
+    width: 60%;
+  }
+  .hand-left {
+    left: -7%;
+  }
+  .hand-right {
+    right: -7%;
+  }
+  .hands-wrap.scrolling-down .hand-left {
+    transform: translateX(44px);
+  }
+  .hands-wrap.scrolling-down .hand-right {
+    transform: translateX(-44px);
   }
 }
 

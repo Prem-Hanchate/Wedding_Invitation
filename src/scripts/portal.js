@@ -74,8 +74,8 @@
       frontRight.classList.add("fade-out");
       letter.classList.add("hero");
     }, 1550);
-    window.setTimeout(() => portalFlash.classList.add("burst"), 2500);
-    window.setTimeout(() => { portalFlash.classList.add("clear"); handoff(); }, 2950);
+    window.setTimeout(() => portalFlash.classList.add("burst"), 2750);
+    window.setTimeout(() => { portalFlash.classList.add("clear"); handoff(); }, 3350);
   }
 
   seal.addEventListener("pointerdown", holdStart);
