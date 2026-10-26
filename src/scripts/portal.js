@@ -75,7 +75,7 @@
       letter.classList.add("hero");
     }, 1550);
     window.setTimeout(() => portalFlash.classList.add("burst"), 2750);
-    window.setTimeout(() => { portalFlash.classList.add("clear"); handoff(); }, 3350);
+    window.setTimeout(() => { portalFlash.classList.add("clear"); handoff(); }, 6000);
   }
 
   seal.addEventListener("pointerdown", holdStart);
