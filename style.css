@@ -616,7 +616,7 @@ img {
 
 .scratch-section {
   padding: 90px 20px 100px;
-  background: radial-gradient(60% 70% at 50% 0%, rgba(147,23,42,.35), transparent 75%), var(--burgundy-deep);
+  background: #3b0710;
 }
 
 .scratch-content {
@@ -1924,7 +1924,7 @@ footer p {
    ========================================================= */
 
 .scroller-section {
-  padding: 90px 16px 110px;
+  padding: 40px 16px 110px;
   overflow: hidden;
 }
 
@@ -2072,10 +2072,10 @@ footer p {
 .scroller-reveal-stack {
   position: relative;
   z-index: 2;
-  width: min(84vw, 300px);
+  width: min(84vw, 320px);
   height: 520px;
-  margin-top: -46px;
-  padding-top: 56px;
+  margin-top: 0;
+  padding-top: 0;
   overflow: hidden;
   background: var(--cream);
   box-shadow: 0 16px 30px -8px rgba(0,0,0,.55);
@@ -2086,14 +2086,15 @@ footer p {
 }
 
 .scroller-reveal-stack.ready { opacity: 1; visibility: visible; transform: translateY(0); transition-delay: 0s; }
-.scroller-strip-photo { width: 100%; padding: 8px 8px 0; }
+.scroller-strip-track { will-change: transform; }
+.scroller-strip-photo { width: 100%; padding: 0 8px; }
 .scroller-strip-photo img { height: 300px; }
-.scroller-reveal-stack.scrolling .scroller-strip-photo { animation: scroller-photo-scroll 18s linear infinite reverse; }
+.scroller-strip-track.scrolling { animation: scroller-photo-scroll 18s linear infinite; }
 .scroller-cap { margin: 6px 0 12px; }
 
 @keyframes scroller-photo-scroll {
   from { transform: translateY(0); }
-  to { transform: translateY(-1272px); }
+  to { transform: translateY(-1250px); }
 }
 
 .scroller-final-line {

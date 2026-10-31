@@ -2,9 +2,9 @@
   const card = document.getElementById("scrollerCard");
   const revealStack = document.getElementById("scrollerRevealStack");
   const finalLine = document.getElementById("scrollerFinalLine");
-  const photos = [...document.querySelectorAll(".scroller-strip-photo")];
   if (!card || !revealStack || !finalLine) return;
-  card.classList.add("opening");
-  photos.forEach((photo) => photo.classList.add("show"));
+  const track = revealStack.querySelector(".scroller-strip-track");
+  if (!track) return;
   finalLine.classList.add("show");
+  window.setTimeout(() => track.classList.add("scrolling"), 1800);
 })();
