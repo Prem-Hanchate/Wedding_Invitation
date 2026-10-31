@@ -561,11 +561,11 @@ body:not(.intro-active) .wedding-ambient {
 }
 
 .hands-wrap.scrolling-down .hand-left {
-  transform: translateX(52px);
+  transform: translateX(100px);
 }
 
 .hands-wrap.scrolling-down .hand-right {
-  transform: translateX(-52px);
+  transform: translateX(-100px);
 }
 
 .hands-wrap.scrolling-up .hand-left,
@@ -814,10 +814,10 @@ body:not(.intro-active) .wedding-ambient {
     right: -7%;
   }
   .hands-wrap.scrolling-down .hand-left {
-    transform: translateX(44px);
+    transform: translateX(72px);
   }
   .hands-wrap.scrolling-down .hand-right {
-    transform: translateX(-44px);
+    transform: translateX(-72px);
   }
 }
 
