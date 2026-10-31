@@ -11,7 +11,7 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------- falling marigold & rose flowers (DOM layer, smooth downward drift) ---------- */
-  const flowerLayer = document.getElementById("flowerLayer");
+  const flowerLayers = document.querySelectorAll(".flower-fall-layer");
   const FLOWER_COLORS = [
     ["#FF9E1B", "#E8630A"], // marigold orange
     ["#FFC24B", "#FF9E1B"], // golden marigold
@@ -60,10 +60,12 @@
   }
 
   function populateFlowers() {
-    if (!flowerLayer || reducedMotion) return;
-    flowerLayer.textContent = "";
+    if (!flowerLayers.length || reducedMotion) return;
     const count = innerWidth < 600 ? 14 : 24;
-    for (let i = 0; i < count; i += 1) flowerLayer.appendChild(makeFlower());
+    flowerLayers.forEach((flowerLayer) => {
+      flowerLayer.textContent = "";
+      for (let i = 0; i < count; i += 1) flowerLayer.appendChild(makeFlower());
+    });
   }
 
   populateFlowers();
@@ -84,8 +86,9 @@
 
   /* pause ambient CSS work while tab is hidden (saves battery on mobile) */
   document.addEventListener("visibilitychange", () => {
-    if (!flowerLayer) return;
-    flowerLayer.style.visibility = document.hidden ? "hidden" : "visible";
+    flowerLayers.forEach((flowerLayer) => {
+      flowerLayer.style.visibility = document.hidden ? "hidden" : "visible";
+    });
   });
 
   /* ---------- keep fixed decor hidden until the envelope is opened ---------- */
@@ -108,7 +111,6 @@
     { selector: ".countdown-section .section-inner, .countdown-section > div", cls: "reveal" },
     { selector: "#events .section-inner", cls: "reveal" },
     { selector: ".event-grid", cls: "reveal-stagger" },
-    { selector: ".scroller-stage", cls: "reveal zoom" },
     { selector: ".location-section .section-inner", cls: "reveal" },
     { selector: ".calendar-section .section-inner", cls: "reveal" },
     { selector: ".wishes-section .section-inner", cls: "reveal" },

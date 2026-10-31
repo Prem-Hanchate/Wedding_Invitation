@@ -8,6 +8,13 @@
     button.setAttribute("aria-pressed", String(playing));
   };
   audio.play().then(() => updateButton(true)).catch(() => updateButton(false));
+  const startFromEnvelope = () => {
+    if (audio.paused) {
+      audio.play().then(() => updateButton(true)).catch(() => updateButton(false));
+    }
+  };
+  window.addEventListener("envelopeOpening", startFromEnvelope, { once: true });
+  window.addEventListener("envelopeOpened", startFromEnvelope, { once: true });
   button.addEventListener("click", async () => {
     if (audio.paused) {
       try { await audio.play(); updateButton(true); }

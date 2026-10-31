@@ -16,6 +16,11 @@
 .scene-glow { position: absolute; top: 50%; left: 50%; z-index: 0; width: 130%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, rgba(216,179,112,.35), transparent 65%); filter: blur(18px); animation: envelope-glow 4s ease-in-out infinite; pointer-events: none; }
 @keyframes envelope-glow { 0%,100% { opacity: .55; transform: translate(-50%,-50%) scale(.9); } 50% { opacity: .9; transform: translate(-50%,-50%) scale(1.08); } }
 .envelope-spark-layer { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.envelope-flower-layer { z-index: 0; opacity: .8; pointer-events: none; }
+.envelope-diya-layer { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.envelope-diya-layer .floating-diya { opacity: .7; }
+.envelope-diya-layer .floating-diya:nth-child(1) { left: 12%; }
+.envelope-diya-layer .floating-diya:nth-child(2) { left: 78%; animation-delay: 5s; }
 .envelope-spark-layer span { position: absolute; bottom: -10px; width: 4px; height: 4px; border-radius: 50%; background: var(--gold-soft); box-shadow: 0 0 8px 2px rgba(240,223,180,.6); opacity: 0; animation: envelope-drift linear infinite; }
 .envelope-spark-layer span:nth-child(1) { left: 12%; animation-duration: 6s; animation-delay: 1s; } .envelope-spark-layer span:nth-child(2) { left: 27%; animation-duration: 8s; animation-delay: 3s; } .envelope-spark-layer span:nth-child(3) { left: 44%; animation-duration: 7s; animation-delay: 0s; } .envelope-spark-layer span:nth-child(4) { left: 66%; animation-duration: 9s; animation-delay: 2s; } .envelope-spark-layer span:nth-child(5) { left: 78%; animation-duration: 6.5s; animation-delay: 4s; } .envelope-spark-layer span:nth-child(6) { left: 90%; animation-duration: 8.5s; animation-delay: 1.5s; }
 @keyframes envelope-drift { 0% { transform: translateY(0) scale(.6); opacity: 0; } 15% { opacity: .85; } 85% { opacity: .4; } 100% { transform: translateY(-100svh) scale(1); opacity: 0; } }

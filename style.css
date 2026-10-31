@@ -24,6 +24,20 @@
 
 }
 
+.photo-section-title {
+  margin: -4px 0 34px;
+  color: var(--gold-soft);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 7vw, 48px);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.photo-section-title em {
+  color: var(--gold);
+  font-style: normal;
+}
+
 
 /* =========================================================
    GLOBAL
@@ -998,8 +1012,6 @@ img {
     var(--gold-soft);
 }
 
-
-.hero-content h1 em,
 .rsvp-section h2 em {
 
   color:
@@ -1191,7 +1203,6 @@ img {
 }
 
 .events-section,
-.scroller-section,
 .location-section {
 
   content-visibility: auto;

@@ -60,6 +60,7 @@
     envelope.classList.remove("holding");
     envelope.classList.add("opening");
     hint.classList.add("hidden");
+    window.dispatchEvent(new CustomEvent("envelopeOpening"));
     if (typeof navigator.vibrate === "function") navigator.vibrate([12, 30, 18]);
     flashBurst.classList.add("go");
     spawnShards();
@@ -78,6 +79,7 @@
     window.setTimeout(() => { portalFlash.classList.add("clear"); handoff(); }, 6000);
   }
 
+  overlay.addEventListener("click", openEnvelope);
   seal.addEventListener("pointerdown", holdStart);
   seal.addEventListener("pointerup", holdEnd);
   seal.addEventListener("pointercancel", holdEnd);
