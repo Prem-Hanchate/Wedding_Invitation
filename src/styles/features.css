@@ -91,7 +91,7 @@
 @keyframes wish-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
 .music-control { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 30; }
-.icon-button { display: grid; width: 44px; height: 44px; place-items: center; border: 1px solid var(--gold); border-radius: 50%; background: rgba(10,4,5,.82); color: var(--gold-soft); font-size: 20px; cursor: pointer; }
+.icon-button { display: grid; width: 56px; height: 56px; place-items: center; border: 1px solid var(--gold); border-radius: 50%; background: rgba(10,4,5,.82); color: var(--gold-soft); font-size: 28px; line-height: 1; cursor: pointer; }
 .icon-button:hover, .icon-button:focus-visible { background: var(--gold); color: var(--burgundy-deep); }
 
 @media (max-width: 600px) {
