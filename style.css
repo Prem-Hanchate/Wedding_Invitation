@@ -1416,20 +1416,6 @@ img {
   box-shadow: 0 8px 18px rgba(76, 13, 24, 0.14);
 }
 
-.section-divider {
-
-  width: min(100%, 400px);
-
-  height: auto;
-
-  display: block;
-
-  margin: 20px auto 30px;
-
-  opacity: 0.85;
-}
-
-
 .event-number {
 
   font-family:
@@ -2089,7 +2075,7 @@ footer p {
 .scroller-strip-track { will-change: transform; }
 .scroller-strip-photo { width: 100%; padding: 0 8px; }
 .scroller-strip-photo img { height: 300px; }
-.scroller-strip-track.scrolling { animation: scroller-photo-scroll 18s linear infinite; }
+.scroller-strip-track.scrolling { animation: scroller-photo-scroll 28s linear infinite; }
 .scroller-cap { margin: 6px 0 12px; }
 
 @keyframes scroller-photo-scroll {
