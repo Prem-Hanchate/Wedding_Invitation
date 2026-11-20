@@ -735,7 +735,7 @@ img {
 }
 
 .scratch-card.scratched {
-  touch-action: none;
+  touch-action: pan-y pinch-zoom;
   pointer-events: auto;
 }
 
