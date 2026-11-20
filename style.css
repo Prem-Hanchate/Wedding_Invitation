@@ -779,6 +779,7 @@ img {
 .countdown-section {
   padding: 88px 20px;
   background: #3b0710;
+  scroll-margin-top: 0;
   opacity: .45;
   visibility: hidden;
   transform: translateY(18px);
