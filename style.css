@@ -651,7 +651,7 @@ img {
   border-radius: 4px;
   background: radial-gradient(circle at 50% 20%, rgba(147,23,42,.7), transparent 62%), #2c0710;
   box-shadow: 0 25px 55px rgba(0,0,0,.4), 0 0 0 7px rgba(216,179,112,.06);
-  touch-action: none;
+  touch-action: pan-y pinch-zoom;
   cursor: crosshair;
 }
 
@@ -725,7 +725,7 @@ img {
   z-index: 3;
   width: 100%;
   height: 100%;
-  touch-action: none;
+  touch-action: pan-y pinch-zoom;
 }
 
 .scratch-card-hint {
