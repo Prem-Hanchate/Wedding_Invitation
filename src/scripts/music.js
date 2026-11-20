@@ -21,6 +21,17 @@
       updateButton(false);
     }
   });
+  const footer = document.querySelector("footer");
+  if (footer && "IntersectionObserver" in window) {
+    const footerObserver = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry?.isIntersecting && !audio.paused) {
+        audio.pause();
+        updateButton(false);
+      }
+    }, { threshold: 0.15 });
+    footerObserver.observe(footer);
+  }
   window.addEventListener("pagehide", () => {
     audio.pause();
     updateButton(false);

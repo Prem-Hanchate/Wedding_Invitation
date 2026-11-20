@@ -2080,7 +2080,7 @@ footer p {
 
 @keyframes scroller-photo-scroll {
   from { transform: translateY(0); }
-  to { transform: translateY(-1250px); }
+  to { transform: translateY(-50%); }
 }
 
 .scroller-final-line {
